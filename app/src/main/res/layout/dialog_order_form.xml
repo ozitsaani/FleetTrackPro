@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_neo_dialog"
+    android:paddingStart="20dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="26dp"
+    android:paddingBottom="26dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Judul Form -->
+        <TextView
+            android:id="@+id/tvFormTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/dialog_title_add"
+            android:textColor="@color/neo_black"
+            android:textSize="18sp" />
+
+        <!-- 1. Nomor Resi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/label_tracking_number"
+            android:textColor="@color/neo_black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etTrackingNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_neo_input"
+            android:fontFamily="monospace"
+            android:inputType="textCapCharacters"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/neo_black"
+            android:textSize="14sp" />
+
+        <!-- 2. Nama Penerima -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/label_recipient_name"
+            android:textColor="@color/neo_black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etRecipientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_neo_input"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/neo_black"
+            android:textSize="14sp" />
+
+        <!-- 3. Nomor Telepon -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/label_recipient_phone"
+            android:textColor="@color/neo_black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etRecipientPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_neo_input"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/neo_black"
+            android:textSize="14sp" />
+
+        <!-- 4. Alamat Tujuan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/label_destination_address"
+            android:textColor="@color/neo_black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_neo_input"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:padding="12dp"
+            android:textColor="@color/neo_black"
+            android:textSize="14sp" />
+
+        <!-- 5. Nominal COD -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/label_cod_amount"
+            android:textColor="@color/neo_black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etCod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_neo_input"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/neo_black"
+            android:textSize="14sp" />
+
+        <!-- 6. Status Pengiriman -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/label_status"
+            android:textColor="@color/neo_black"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/spStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_neo_input"
+            android:minHeight="48dp"
+            android:padding="12dp" />
+
+        <!-- 7. Alasan Gagal Kirim (Hanya tampil jika FAILED) -->
+        <TextView
+            android:id="@+id/tvLabelFailureReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/label_failure_reason"
+            android:textColor="@color/neo_black"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etFailureReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_neo_input"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:padding="12dp"
+            android:textColor="@color/neo_black"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- Baris Tombol Aksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.FleetTrack.NeoButton.Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/action_cancel"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                style="@style/Widget.FleetTrack.NeoButton.Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_save"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

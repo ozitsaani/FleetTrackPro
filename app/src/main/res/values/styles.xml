@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Neubrutalism Button Style -->
+    <style name="Widget.FleetTrack.NeoButton" parent="Widget.Material3.Button">
+        <item name="strokeColor">@color/neo_black</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textColor">@color/neo_black</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.FleetTrack.NeoButton.Deliver">
+        <item name="backgroundTint">@color/neo_lime</item>
+    </style>
+
+    <style name="Widget.FleetTrack.NeoButton.Edit">
+        <item name="backgroundTint">@color/neo_yellow</item>
+    </style>
+
+    <style name="Widget.FleetTrack.NeoButton.Delete">
+        <item name="backgroundTint">@color/neo_red</item>
+    </style>
+
+    <style name="Widget.FleetTrack.NeoButton.Save">
+        <item name="backgroundTint">@color/neo_pink</item>
+    </style>
+
+    <style name="Widget.FleetTrack.NeoButton.Cancel">
+        <item name="backgroundTint">@color/neo_white</item>
+    </style>
+</resources>

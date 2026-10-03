@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_neo_card"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="18dp"
+    android:paddingBottom="18dp">
+
+    <!-- Baris 1: Nomor Resi & Badge Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTrackingNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:textColor="@color/neo_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="EXP-90021-JKT" />
+
+        <TextView
+            android:id="@+id/tvStatusBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pending"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/neo_black"
+            android:textSize="11sp"
+            tools:text="PENDING" />
+    </LinearLayout>
+
+    <!-- Penerima & Alamat -->
+    <TextView
+        android:id="@+id/tvRecipient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/neo_black"
+        android:textSize="13sp"
+        tools:text="Ibu Ratna Dewi (081234567890)" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/neo_grey"
+        android:textSize="12sp"
+        tools:text="Jl. Melati Raya No. 45, Harjamukti, Cirebon" />
+
+    <!-- Alasan Gagal Kirim -->
+    <TextView
+        android:id="@+id/tvFailureReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-bold"
+        android:textColor="@color/neo_red"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="Alasan: Rumah kosong / penerima tidak di tempat" />
+
+    <!-- Indikator Belum Tersinkron -->
+    <TextView
+        android:id="@+id/tvSyncState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/sync_unsynced"
+        android:textColor="@color/neo_black"
+        android:textSize="11sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- COD Amount -->
+    <TextView
+        android:id="@+id/tvCodAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/neo_black"
+        android:textSize="13sp"
+        tools:text="COD: Rp 125.000" />
+
+    <!-- Baris Tombol Aksi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActionEdit"
+            style="@style/Widget.FleetTrack.NeoButton.Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/action_edit"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActionDelete"
+            style="@style/Widget.FleetTrack.NeoButton.Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/action_delete"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActionDeliver"
+            style="@style/Widget.FleetTrack.NeoButton.Deliver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_deliver"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

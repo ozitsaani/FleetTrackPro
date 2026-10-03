@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neo_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 1. Header Neubrutalism -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_neo_header"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/header_title"
+                android:textColor="@color/neo_black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvHeaderSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="monospace"
+                android:text="@string/header_subtitle"
+                android:textColor="@color/neo_black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 2. Search Bar -->
+        <EditText
+            android:id="@+id/etSearchManifest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_neo_input"
+            android:fontFamily="sans-serif-medium"
+            android:hint="@string/hint_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/neo_black"
+            android:textColorHint="@color/neo_grey"
+            android:textSize="14sp" />
+
+        <!-- 3. Progress Bar Loading -->
+        <ProgressBar
+            android:id="@+id/pbMainLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/neo_black"
+            android:visibility="gone" />
+
+        <!-- 4. Empty State Text -->
+        <TextView
+            android:id="@+id/tvEmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/empty_state_no_data"
+            android:textColor="@color/neo_black"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!-- 5. SwipeRefreshLayout membungkus RecyclerView -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvManifest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="96dp"
+                tools:listitem="@layout/item_delivery_order" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <!-- 6. Extended FAB Tambah Paket -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/fab_add_order"
+        android:textColor="@color/neo_black"
+        app:backgroundTint="@color/neo_pink"
+        app:cornerRadius="4dp"
+        app:elevation="0dp"
+        app:strokeColor="@color/neo_black"
+        app:strokeWidth="3dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

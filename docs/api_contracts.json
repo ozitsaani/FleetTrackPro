@@ -1,0 +1,62 @@
+{
+  "baseUrl": "https://mock-api.fleettrack.id/",
+  "endpoints": [
+    {
+      "id": "getTodayManifest",
+      "method": "GET",
+      "path": "/api/v1/courier/manifest/today",
+      "response200": [
+        {
+          "order_id": "ORD-2026-8801",
+          "tracking_number": "EXP-90021-JKT",
+          "recipient_name": "Ibu Ratna Dewi",
+          "recipient_phone": "081234567890",
+          "destination_address": "Jl. Melati Raya No. 45, Harjamukti, Cirebon",
+          "cod_amount": 125000.0,
+          "status": "PENDING",
+          "failure_reason": null
+        }
+      ]
+    },
+    {
+      "id": "updateDeliveryStatus",
+      "method": "POST",
+      "path": "/api/v1/courier/deliveries/{order_id}/status",
+      "query": {
+        "status": "PENDING | IN_DELIVERY | DELIVERED | FAILED"
+      },
+      "response200": {
+        "success": true,
+        "message": "Status pengiriman berhasil diperbarui ke server pusat."
+      }
+    },
+    {
+      "id": "upsertDelivery",
+      "method": "PUT",
+      "path": "/api/v1/courier/deliveries/{order_id}",
+      "requestBody": {
+        "order_id": "LOC-1767000000000",
+        "tracking_number": "EXP-10001-CRB",
+        "recipient_name": "Bu Sari",
+        "recipient_phone": "081211112222",
+        "destination_address": "Jl. Pekiringan No. 7, Cirebon",
+        "cod_amount": 50000.0,
+        "status": "PENDING",
+        "failure_reason": null
+      },
+      "response200": {
+        "success": true,
+        "message": "Paket berhasil disimpan ke server pusat."
+      }
+    },
+    {
+      "id": "deleteDelivery",
+      "method": "DELETE",
+      "path": "/api/v1/courier/deliveries/{order_id}",
+      "response200": {
+        "success": true,
+        "message": "Paket berhasil dihapus dari server pusat."
+      }
+    }
+  ]
+}

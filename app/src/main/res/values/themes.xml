@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Neubrutalism Theme -->
+    <style name="Theme.FleetTrackPro" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/neo_cream</item>
+        <item name="colorPrimary">@color/neo_black</item>
+        <item name="colorOnPrimary">@color/neo_white</item>
+        <item name="android:statusBarColor">@color/neo_yellow</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.FleetTrack.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.FleetTrack.Medium</item>
+    </style>
+
+    <style name="ShapeAppearance.FleetTrack.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">4dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ShapeAppearance.FleetTrack.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">4dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+</resources>

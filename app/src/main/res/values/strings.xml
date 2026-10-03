@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">FleetTrackPro</string>
+    <string name="header_title">FLEETTRACKPRO</string>
+    <string name="header_subtitle">Manifest Kurir Hari Ini</string>
+    <string name="hint_search">CARI RESI / NAMA / ALAMAT</string>
+    <string name="empty_state_no_data">BELUM ADA PAKET</string>
+    <string name="empty_state_no_result">TIDAK ADA HASIL</string>
+    <string name="fab_add_order">+ TAMBAH PAKET</string>
+
+    <string name="action_deliver">TERKIRIM</string>
+    <string name="action_edit">EDIT</string>
+    <string name="action_delete">HAPUS</string>
+    <string name="action_completed">SELESAI</string>
+    <string name="action_failed">GAGAL</string>
+    <string name="action_save">SIMPAN</string>
+    <string name="action_cancel">BATAL</string>
+    <string name="action_undo">URUNGKAN</string>
+
+    <string name="sync_unsynced">● BELUM TERSINKRON</string>
+    <string name="reason_prefix">Alasan: %s</string>
+    <string name="cod_format">COD: %s</string>
+    <string name="toast_deliver_success">Paket %s berhasil diserahkan!</string>
+    <string name="toast_saved">Paket tersimpan</string>
+    <string name="toast_deleted">Paket dihapus</string>
+    <string name="toast_offline">Mode offline: menampilkan data lokal</string>
+
+    <string name="dialog_title_add">TAMBAH PAKET</string>
+    <string name="dialog_title_edit">EDIT PAKET</string>
+    <string name="label_tracking_number">NOMOR RESI</string>
+    <string name="label_recipient_name">NAMA PENERIMA</string>
+    <string name="label_recipient_phone">NOMOR TELEPON</string>
+    <string name="label_destination_address">ALAMAT TUJUAN</string>
+    <string name="label_cod_amount">NOMINAL COD (RP)</string>
+    <string name="label_status">STATUS PENGIRIMAN</string>
+    <string name="label_failure_reason">ALASAN GAGAL KIRIM</string>
+
+    <string name="error_required">Wajib diisi</string>
+    <string name="error_phone_invalid">Format telepon tidak valid (contoh: 081234567890)</string>
+    <string name="error_address_min">Alamat minimal 5 karakter</string>
+    <string name="error_tracking_duplicate">Nomor resi sudah dipakai paket lain</string>
+    <string name="dialog_delete_confirm_title">Konfirmasi Hapus</string>
+    <string name="dialog_delete_confirm_msg">Hapus paket %s?</string>
+</resources>

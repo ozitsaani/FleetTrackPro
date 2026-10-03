@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Garis bawah hitam -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/neo_black" />
+        </shape>
+    </item>
+
+    <!-- Header kuning dengan offset 3dp di bagian bawah -->
+    <item android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/neo_yellow" />
+        </shape>
+    </item>
+</layer-list>
